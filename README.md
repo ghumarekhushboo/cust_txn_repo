@@ -63,12 +63,19 @@ AUDIT-> logs job runs and Data Quality check results.
 # DDL
 -	Execute DDLs & Schema sql files from the folder “SQL\DDL”. 
 -	Schemas are as below: 
+
 RAW -> ingest the files
+
 STG-> maintains data
+
 CORE-> contains dim/facts
+
 REP-> contains aggregated tables
+
 ETL-> Transformation/load Procedures
+
 AUDIT-> logs job runs and Data Quality check results.
+
 -	Create Procedures RAW to STG & STG to CORE load present under SQL\ETL_CORE folder.
 -	Execute below layers. Note for Every ETL load there is a row present in ETL_LOAD_LOG table for the job run for all the layers from files -> RAW -> STG -> CORE
 
