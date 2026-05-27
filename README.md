@@ -5,7 +5,7 @@
 # Description
 The Customer Transaction Data Warehouse provides analytics ready view of customer and transaction data across the bank. It integrates customer master data, account information, daily FX rates, and transaction events into a dimensional model that supports reporting.
 This document outlines the end to end architecture, including data ingestion, storage layers, transformation logic, dimensional modelling, and aggregation/reporting layer.
-# High Level Architecture Diagram
+# High Level Architecture Flow
 The architecture consists of different layers to consume the source and load the data warehouse
 
 Source Files -> Raw Layer -> Stg Layer -> Core Layer -> Rep Layer
