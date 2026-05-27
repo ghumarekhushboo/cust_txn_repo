@@ -1,4 +1,4 @@
---before load to transactions fact
+--before load to CORE Layer
 
 INSERT INTO AUDIT.DQ_CHECK_LOG (check_name, status, records_failed)
 SELECT 
@@ -34,7 +34,7 @@ FROM STG.TRANSACTIONS t
 LEFT JOIN CORE.dim_account a ON t.account_id = a.account_id
 WHERE a.account_id IS NULL;
 
---before load to dim_account
+
 INSERT INTO AUDIT.DQ_CHECK_LOG (check_name, status, records_failed)
 SELECT 
     'Referential integrity check for account map to valid customers',
@@ -44,7 +44,7 @@ FROM STG.ACCOUNTS a
 LEFT JOIN CORE.dim_customer c ON a.customer_id = c.customer_id
 WHERE c.customer_id IS NULL;
 
---before load to transactions fact
+
 
 INSERT INTO AUDIT.DQ_CHECK_LOG (check_name, status, records_failed)
 SELECT 
